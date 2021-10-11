@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+extension Notification.Name {
+    static let passData = Notification.Name("pass")
+}

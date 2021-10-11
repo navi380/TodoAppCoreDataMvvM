@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class Injection{
+    static let provide = Injection()
+
+    func CategoryViewModelInjection() -> CategoryViewModel{
+        return CategoryViewModel(repository: CategoryDataRepository.shared)
+    }
+    
+    func TodoViewModelInjection() -> TodoViewModel{
+        return TodoViewModel(repository: TodoDataRepository.shared)
+    }
+
+}

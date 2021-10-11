@@ -19,6 +19,10 @@ extension CDCategory {
     @NSManaged public var id: UUID?
     @NSManaged public var category_title: String?
     @NSManaged public var todos: NSSet?
+    
+    func returnCategoryObject() -> Category {
+        return Category(id: self.id!, categoryTitle: self.category_title!)
+    }
 
 }
 

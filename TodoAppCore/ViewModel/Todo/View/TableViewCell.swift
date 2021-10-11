@@ -7,17 +7,27 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
+//MARK: -  TODO TABLE VIEW CELL
+class TableViewCell: UITableViewCell{
+    //MARK: -  IBOUTLETS
+    @IBOutlet weak var todoTitle: UILabel!
+    
+    @IBOutlet weak var isChecked: UIButton!
+    
+    //MARK: -  LIFE CYCLE
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+            super.awakeFromNib()
+            // Initialization code
+        }
+    //MARK: -  IBACTIONS
+    @IBAction func btnChecked(_ sender: Any) {
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
+    
+    //MARK: -  OTHER FUNCTIONS
+    func config(todo: Todo){
+               self.todoTitle.text = todo.todoTitle
+               self.isChecked.isSelected = todo.isChecked
+           }
     
 }

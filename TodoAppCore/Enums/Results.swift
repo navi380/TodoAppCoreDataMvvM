@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+enum Result<T> {
+    case success(T)
+    case failure(Error)
+}

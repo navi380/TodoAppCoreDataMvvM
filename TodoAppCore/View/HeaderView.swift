@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+import UIKit
+class HeaderView: UIView {
+    @IBOutlet weak var headerTitle  : UILabel?
+    @IBOutlet weak var backView     : UIView!
+}

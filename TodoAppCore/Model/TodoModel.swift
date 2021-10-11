@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+struct Todo {
+    let id: UUID
+    let todoTitle: String
+    let isChecked: Bool
+    var todoCategory: Category
+}

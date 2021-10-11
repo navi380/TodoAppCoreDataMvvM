@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Category: Equatable{
+    let id: UUID
+    let categoryTitle: String
+}
